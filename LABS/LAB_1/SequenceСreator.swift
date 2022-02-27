@@ -46,10 +46,10 @@ final class SequenceСreator {
         guard finalElement >= 1 else {
             return []
         }
-        var arr: [Int] = []
+        var resultArray: [Int] = []
         for i in 0..<finalElement {
-            arr.append(finalElement - i)
+            resultArray.append(finalElement - i)
         }
-        return arr
+        return resultArray
     }
 }
