@@ -16,7 +16,7 @@ import Foundation
 // Решение кратко обоснуйте в блоке | Обоснование решения |.
 // Например: /* Я сделал …, т.к. это красиво */
 
-/* | Обоснование решения | */
+/* Я добавил захват переменной number, т.к. необходимо иметь доступ к её неизмененному значению */
 
 
 final class CaptureLists {
@@ -26,7 +26,7 @@ final class CaptureLists {
     func disputeWithSheldonCooper(myFavouriteNumber: Int) {
         var number = myFavouriteNumber
         
-        let setValueInFavouriteNumber: () -> () = {
+        let setValueInFavouriteNumber: () -> () = { [number] in
             self.favouriteNumber = number
         }
         

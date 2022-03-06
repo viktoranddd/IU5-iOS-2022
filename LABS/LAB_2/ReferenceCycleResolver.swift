@@ -12,12 +12,12 @@ import Foundation
 // Решение кратко обоснуйте в блоке | Обоснование решения |.
 // Например: /* Я сделал …, т.к. это красиво */
 
-/* | Обоснование решения | */
+/* Я добавил ключевое слово weak для переменной university в классе Student, чтобы избежать Retain Cycle */
 
 final class Student {
     let name: String
     
-    var university: University?
+    weak var university: University?
     
     init(name: String) {
         self.name = name
