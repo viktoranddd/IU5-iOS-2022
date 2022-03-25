@@ -17,6 +17,8 @@ final class InitialViewController: UIViewController {
     private enum CellsDisplayData: String, CaseIterable {
         case lab3 = "Лабораторная работа 3"
         case lab4 = "Лабораторная работа 4"
+        case lab5task1 = "Лабораторная работа 5 (MVP & MVC)"
+        case lab5task2 = "Лабораторная работа 5 (VIPER & MVC)"
     }
     
     // MARK: - Lifecycle
@@ -53,7 +55,6 @@ final class InitialViewController: UIViewController {
             tableViewController.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableViewController.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
-        //tableViewController.contentInset = UIEdgeInsets(top: 200, left: 0, bottom: 0, right: 0)
     }
 }
 
@@ -68,16 +69,33 @@ extension InitialViewController: UITableViewDelegate {
             navigationController?.pushViewController(vc, animated: true)
         }
         else {
-            let codedViewController = CodedViewController()
-            navigationController?.pushViewController(codedViewController, animated: true)
+            if indexPath.row == 1 {
+                let codedViewController = CodedViewController()
+                navigationController?.pushViewController(codedViewController, animated: true)
+
+            }
+            else {
+                if indexPath.row == 2 {
+                    let builder = ButtonModuleBuilder()
+                    let viewController = builder.build(output: self)
+                    navigationController?.pushViewController(viewController, animated: true)
+                }
+                else {
+                    let builder = ViperButtonModuleBuilder()
+                    let viewController = builder.build(output: self)
+                    navigationController?.pushViewController(viewController, animated: true)
+                }
+                
+            }
         }
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 extension InitialViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,4 +106,19 @@ extension InitialViewController: UITableViewDataSource {
         return cell
     }
     
+}
+
+extension InitialViewController: ButtonModuleOutput {
+    func buttonWasTapped() {
+        let tableViewController = TableViewController()
+        navigationController?.pushViewController(tableViewController, animated: true)
+    }
+    
+}
+
+extension InitialViewController: ViperButtonModuleOutput {
+    func tableButtonWasTapped() {
+        let tableViewController = TableViewController()
+        navigationController?.pushViewController(tableViewController, animated: true)
+    }
 }
