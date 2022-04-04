@@ -19,6 +19,7 @@ final class InitialViewController: UIViewController {
         case lab4 = "Лабораторная работа 4"
         case lab5task1 = "Лабораторная работа 5 (MVP & MVC)"
         case lab5task2 = "Лабораторная работа 5 (VIPER & MVC)"
+        case lab6 = "Лабораторная работа 6"
     }
     
     // MARK: - Lifecycle
@@ -81,9 +82,15 @@ extension InitialViewController: UITableViewDelegate {
                     navigationController?.pushViewController(viewController, animated: true)
                 }
                 else {
-                    let builder = ViperButtonModuleBuilder()
-                    let viewController = builder.build(output: self)
-                    navigationController?.pushViewController(viewController, animated: true)
+                    if indexPath.row == 3 {
+                        let builder = ViperButtonModuleBuilder()
+                        let viewController = builder.build(output: self)
+                        navigationController?.pushViewController(viewController, animated: true)
+                    }
+                    else {
+                        let viewController = ExchangeRateViewController()
+                        navigationController?.pushViewController(viewController, animated: true)
+                    }
                 }
                 
             }
@@ -95,7 +102,7 @@ extension InitialViewController: UITableViewDelegate {
 
 extension InitialViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        4
+        5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
