@@ -15,8 +15,8 @@ final class ExchangeRateViewController: UIViewController {
     private let exchangeRateLabel = UILabel()
     private var networkService: NetworkServiceProtocol!
     private var requestFactory: NetworkRequestFactoryProtocol!
-    var currentDate: String = "Нет даты"
-    var currentExchangeRate: Double = 0.0
+    private var currentDate: String = "Нет даты"
+    private var currentExchangeRate: Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()

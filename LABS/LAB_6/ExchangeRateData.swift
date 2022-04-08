@@ -22,4 +22,9 @@ struct ExchangeRateData: Decodable {
         date = try values.decode(String.self, forKey: .date)
         rublesPerDollar = try values.decode(Double.self, forKey: .rublesPerDollar)
     }
+    
+    init(date: String, rublesPerDollar: Double) {
+        self.date = date
+        self.rublesPerDollar = rublesPerDollar
+    }
 }
