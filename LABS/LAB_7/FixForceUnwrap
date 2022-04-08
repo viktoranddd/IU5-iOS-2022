@@ -1,0 +1,26 @@
+    
+    func convertToDTO() -> WeatherForecast {
+        var weatherData: [WeatherData] = []
+        data?.forEach { dataElement in
+            guard let dataElement = dataElement as? WeatherDataModel else { return }
+            weatherData.append(dataElement.convertToDTO())
+        }
+        
+        return WeatherForecast(
+            // TODO: Убрать force unwrap
+            // можно использовать дефолтные значения
+            weatherMain: weatherMain?.convertToDTO() ?? WeatherMain(
+                humidity: 0,
+                feelsLike: 0,
+                tempMin: 0,
+                tempMax: 0,
+                temp: 0,
+                pressure: 0
+            ),
+            windData: windData?.convertToDTO() ?? WindData(speed: 0, degree: 0),
+            system: system?.convertToDTO() ?? WeatherSystemData(country: "", sunset: Date(), sunrise: Date()),
+            data: weatherData,
+            visibility: visibility,
+            cityName: cityName ?? ""
+        )
+    }

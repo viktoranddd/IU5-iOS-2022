@@ -27,6 +27,9 @@
 		7844CBAE27CA72DB00B4A094 /* ConcurrentPerformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844CBAD27CA72DB00B4A094 /* ConcurrentPerformTests.swift */; };
 		7844CBB027CADA8000B4A094 /* Shipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844CBAF27CADA7F00B4A094 /* Shipment.swift */; };
 		7844CBB227CADCD000B4A094 /* ShipmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844CBB127CADCD000B4A094 /* ShipmentTests.swift */; };
+		7D01038528002DEB000CFDE1 /* FixForceUnwrap in Resources */ = {isa = PBXBuildFile; fileRef = 7D01038428002DEB000CFDE1 /* FixForceUnwrap */; };
+		7D4BB4DE280007B100244A38 /* ExchangeRate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D4BB4DC280007B100244A38 /* ExchangeRate.xcdatamodeld */; };
+		7D4BB4E028000C4E00244A38 /* ExchangeRateDataModel+Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4BB4DF28000C4E00244A38 /* ExchangeRateDataModel+Converter.swift */; };
 		7D553D6427E7D131004498F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D553D6327E7D131004498F5 /* AppDelegate.swift */; };
 		7D553D6627E7D139004498F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D553D6527E7D139004498F5 /* Assets.xcassets */; };
 		7D553D6D27E7D147004498F5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D553D6B27E7D147004498F5 /* Info.plist */; };
@@ -60,6 +63,10 @@
 		7D6ACBA427EE2A0D00AC038D /* ViperButtonInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6ACB9927EE2A0D00AC038D /* ViperButtonInteractor.swift */; };
 		7D6ACBA527EE2A0D00AC038D /* ViperButtonInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6ACB9A27EE2A0D00AC038D /* ViperButtonInteractorIO.swift */; };
 		7D6ACBA627EE2A0D00AC038D /* ViperTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6ACB9C27EE2A0D00AC038D /* ViperTableViewController.swift */; };
+		7DFBE32527FB346C0009AC78 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE32427FB346C0009AC78 /* NetworkService.swift */; };
+		7DFBE32727FB37C40009AC78 /* NetworkRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE32627FB37C40009AC78 /* NetworkRequestFactory.swift */; };
+		7DFBE32927FB3DEA0009AC78 /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE32827FB3DEA0009AC78 /* ExchangeRateViewController.swift */; };
+		7DFBE32B27FB4D270009AC78 /* ExchangeRateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBE32A27FB4D270009AC78 /* ExchangeRateData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +103,9 @@
 		7844CBAD27CA72DB00B4A094 /* ConcurrentPerformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentPerformTests.swift; sourceTree = "<group>"; };
 		7844CBAF27CADA7F00B4A094 /* Shipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shipment.swift; sourceTree = "<group>"; };
 		7844CBB127CADCD000B4A094 /* ShipmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentTests.swift; sourceTree = "<group>"; };
+		7D01038428002DEB000CFDE1 /* FixForceUnwrap */ = {isa = PBXFileReference; lastKnownFileType = text; path = FixForceUnwrap; sourceTree = "<group>"; };
+		7D4BB4DD280007B100244A38 /* ExchangeRate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExchangeRate.xcdatamodel; sourceTree = "<group>"; };
+		7D4BB4DF28000C4E00244A38 /* ExchangeRateDataModel+Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExchangeRateDataModel+Converter.swift"; sourceTree = "<group>"; };
 		7D553D6327E7D131004498F5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D553D6527E7D139004498F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D553D6927E7D140004498F5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -129,6 +139,10 @@
 		7D6ACB9927EE2A0D00AC038D /* ViperButtonInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperButtonInteractor.swift; sourceTree = "<group>"; };
 		7D6ACB9A27EE2A0D00AC038D /* ViperButtonInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperButtonInteractorIO.swift; sourceTree = "<group>"; };
 		7D6ACB9C27EE2A0D00AC038D /* ViperTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperTableViewController.swift; sourceTree = "<group>"; };
+		7DFBE32427FB346C0009AC78 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		7DFBE32627FB37C40009AC78 /* NetworkRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestFactory.swift; sourceTree = "<group>"; };
+		7DFBE32827FB3DEA0009AC78 /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
+		7DFBE32A27FB4D270009AC78 /* ExchangeRateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +201,8 @@
 		78052E8B27BA89A500BB3916 /* LABS */ = {
 			isa = PBXGroup;
 			children = (
+				7D4BB4DB2800064F00244A38 /* LAB_7 */,
+				7DFBE32327FB333F0009AC78 /* LAB_6 */,
 				7801412927D642C900E22965 /* LAB_3 */,
 				7844CBA127C91DCA00B4A094 /* LAB_2 */,
 				7844CB9B27C2600A00B4A094 /* LAB_0 */,
@@ -274,6 +290,16 @@
 				7844CBB127CADCD000B4A094 /* ShipmentTests.swift */,
 			);
 			path = LAB_2;
+			sourceTree = "<group>";
+		};
+		7D4BB4DB2800064F00244A38 /* LAB_7 */ = {
+			isa = PBXGroup;
+			children = (
+				7D4BB4DC280007B100244A38 /* ExchangeRate.xcdatamodeld */,
+				7D4BB4DF28000C4E00244A38 /* ExchangeRateDataModel+Converter.swift */,
+				7D01038428002DEB000CFDE1 /* FixForceUnwrap */,
+			);
+			path = LAB_7;
 			sourceTree = "<group>";
 		};
 		7D553D6727E7D140004498F5 /* Base.lproj */ = {
@@ -451,6 +477,17 @@
 			path = "Table MVC Module";
 			sourceTree = "<group>";
 		};
+		7DFBE32327FB333F0009AC78 /* LAB_6 */ = {
+			isa = PBXGroup;
+			children = (
+				7DFBE32427FB346C0009AC78 /* NetworkService.swift */,
+				7DFBE32627FB37C40009AC78 /* NetworkRequestFactory.swift */,
+				7DFBE32827FB3DEA0009AC78 /* ExchangeRateViewController.swift */,
+				7DFBE32A27FB4D270009AC78 /* ExchangeRateData.swift */,
+			);
+			path = LAB_6;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -534,6 +571,7 @@
 			files = (
 				7D553D6627E7D139004498F5 /* Assets.xcassets in Resources */,
 				7D6ACB6927EE280E00AC038D /* LaunchScreen.storyboard in Resources */,
+				7D01038528002DEB000CFDE1 /* FixForceUnwrap in Resources */,
 				7D553D6D27E7D147004498F5 /* Info.plist in Resources */,
 				7D553D8627E7D164004498F5 /* Main.storyboard in Resources */,
 			);
@@ -553,7 +591,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DFBE32927FB3DEA0009AC78 /* ExchangeRateViewController.swift in Sources */,
 				7D6ACB8727EE28AA00AC038D /* TableViewControllerCell.swift in Sources */,
+				7DFBE32727FB37C40009AC78 /* NetworkRequestFactory.swift in Sources */,
 				7D553D7827E7D15D004498F5 /* CodedSecondViewControllerCell.swift in Sources */,
 				7D6ACB6D27EE287600AC038D /* InitialViewControllerCell.swift in Sources */,
 				7D6ACBA327EE2A0D00AC038D /* ViperButtonViewIO.swift in Sources */,
@@ -563,6 +603,7 @@
 				7D6ACBA527EE2A0D00AC038D /* ViperButtonInteractorIO.swift in Sources */,
 				7D6ACB9E27EE2A0D00AC038D /* ViperComponentsViewController.swift in Sources */,
 				7D6ACB9D27EE2A0D00AC038D /* ViperTableViewControllerCell.swift in Sources */,
+				7DFBE32527FB346C0009AC78 /* NetworkService.swift in Sources */,
 				7D6ACB9F27EE2A0D00AC038D /* ViperButtonModuleBuilder.swift in Sources */,
 				7D6ACB8227EE28AA00AC038D /* ButtonModuleBuilder.swift in Sources */,
 				7844CB9D27C2605D00B4A094 /* SwapValues.swift in Sources */,
@@ -571,17 +612,20 @@
 				7D6ACBA227EE2A0D00AC038D /* ViperButtonViewController.swift in Sources */,
 				7844CB9027C1A34200B4A094 /* NumberToArray.swift in Sources */,
 				7D6ACB8527EE28AA00AC038D /* ButtonViewController.swift in Sources */,
+				7DFBE32B27FB4D270009AC78 /* ExchangeRateData.swift in Sources */,
 				78052EBF27BA8AC300BB3916 /* SequenceСreator.swift in Sources */,
 				7844CB9427C1A72600B4A094 /* BooleanConverter.swift in Sources */,
 				7844CB9227C1A5BE00B4A094 /* SquareSum.swift in Sources */,
 				7D6ACB8027EE28AA00AC038D /* ButtonPresenter.swift in Sources */,
 				7D6ACBA427EE2A0D00AC038D /* ViperButtonInteractor.swift in Sources */,
 				7D553D8327E7D164004498F5 /* ViewController.swift in Sources */,
+				7D4BB4DE280007B100244A38 /* ExchangeRate.xcdatamodeld in Sources */,
 				7D6ACBA127EE2A0D00AC038D /* ViperButtonModuleIO.swift in Sources */,
 				7844CBAA27CA47B000B4A094 /* CaptureLists.swift in Sources */,
 				7844CBA827CA476900B4A094 /* ConcurrentPerform.swift in Sources */,
 				7D6ACBA027EE2A0D00AC038D /* ViperButtonPresenter.swift in Sources */,
 				7D553D7627E7D15D004498F5 /* CodedThirdViewController.swift in Sources */,
+				7D4BB4E028000C4E00244A38 /* ExchangeRateDataModel+Converter.swift in Sources */,
 				7D6ACB6B27EE287000AC038D /* InitialViewController.swift in Sources */,
 				7D553D8527E7D164004498F5 /* TestCell.swift in Sources */,
 				7D6ACBA627EE2A0D00AC038D /* ViperTableViewController.swift in Sources */,
@@ -885,6 +929,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7D4BB4DC280007B100244A38 /* ExchangeRate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7D4BB4DD280007B100244A38 /* ExchangeRate.xcdatamodel */,
+			);
+			currentVersion = 7D4BB4DD280007B100244A38 /* ExchangeRate.xcdatamodel */;
+			path = ExchangeRate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 78052E8127BA89A500BB3916 /* Project object */;
 }
