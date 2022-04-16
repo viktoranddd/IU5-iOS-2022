@@ -18,6 +18,8 @@ final class ExchangeRateViewController: UIViewController {
     private var currentDate: String = "Нет даты"
     private var currentExchangeRate: Double = 0.0
     
+    var output: ExchangeRateViewOutput!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,12 +31,14 @@ final class ExchangeRateViewController: UIViewController {
         setupShowExchangeRateButton()
         setupDateLabel()
         setupExchangeRateLabel()
+        
+        output.viewDidLoad()
     }
     
     private func setupShowExchangeRateButton() {
         view.addSubview(showExchangeRateButton)
         showExchangeRateButton.backgroundColor = .systemBlue
-        showExchangeRateButton.setTitle("Показать курс доллара", for: .normal)
+        showExchangeRateButton.setTitle("Обновить курс доллара", for: .normal)
         showExchangeRateButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             showExchangeRateButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -47,7 +51,7 @@ final class ExchangeRateViewController: UIViewController {
     
     func setupDateLabel() {
         view.addSubview(dateLabel)
-        dateLabel.isHidden = true
+        //dateLabel.isHidden = true
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             dateLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -57,7 +61,7 @@ final class ExchangeRateViewController: UIViewController {
     
     func setupExchangeRateLabel() {
         view.addSubview(exchangeRateLabel)
-        exchangeRateLabel.isHidden = true
+        //exchangeRateLabel.isHidden = true
         exchangeRateLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             exchangeRateLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -67,9 +71,9 @@ final class ExchangeRateViewController: UIViewController {
     
     func setupNewValues(exchangeRateData: ExchangeRateData) {
         dateLabel.text = "Дата: " + exchangeRateData.date
-        dateLabel.isHidden = false
+        //dateLabel.isHidden = false
         exchangeRateLabel.text = "Курс: " + String(exchangeRateData.rublesPerDollar)
-        exchangeRateLabel.isHidden = false
+        //exchangeRateLabel.isHidden = false
     }
     
     @objc
@@ -87,8 +91,22 @@ final class ExchangeRateViewController: UIViewController {
                 } catch {
                     assertionFailure("\(error)")
                 }
-                
             }
         }
+    }
+}
+
+extension ExchangeRateViewController: ExchangeRateViewInput {
+    func reloadData(rate: ExchangeRateData) {
+        dateLabel.text = "Дата: " + rate.date
+        exchangeRateLabel.text = "Курс: " + String(rate.rublesPerDollar)
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 }

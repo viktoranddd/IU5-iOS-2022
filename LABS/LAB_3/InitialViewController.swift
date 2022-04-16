@@ -19,7 +19,7 @@ final class InitialViewController: UIViewController {
         case lab4 = "Лабораторная работа 4"
         case lab5task1 = "Лабораторная работа 5 (MVP & MVC)"
         case lab5task2 = "Лабораторная работа 5 (VIPER & MVC)"
-        case lab6 = "Лабораторная работа 6"
+        case lab6 = "Лабораторные работы 6, 7, 8"
     }
     
     // MARK: - Lifecycle
@@ -88,8 +88,10 @@ extension InitialViewController: UITableViewDelegate {
                         navigationController?.pushViewController(viewController, animated: true)
                     }
                     else {
-                        let viewController = ExchangeRateViewController()
-                        navigationController?.pushViewController(viewController, animated: true)
+                        let vc = ExchangeRateModuleBuilder().build()
+                        let viewController = UINavigationController(rootViewController: vc)
+                        self.present(viewController, animated: true, completion: nil)
+                        //navigationController?.pushViewController(viewController, animated: true)
                     }
                 }
                 
